@@ -33,6 +33,9 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--salvia);outline-of
 .monogram{font:500 34px var(--serif);letter-spacing:-3px;padding-right:4px}
 .monogram i{font-style:normal;color:var(--salvia);letter-spacing:0}
 .brand small{display:block;font:500 8px var(--sans);letter-spacing:2.5px;margin-top:5px;color:var(--muted-dark)}
+.brand img{width:auto;object-fit:contain}
+.logo-h{height:58px}
+.logo-full{height:150px}
 .header-link{font-size:12px;font-weight:500}
 .header-link span{color:var(--salvia);font-size:20px;margin-left:16px}
 
@@ -188,7 +191,10 @@ footer{padding:55px 5.5% 26px}
 /* ---------- celular ---------- */
 @media(max-width:900px){
   .masthead{height:80px;margin:0 6%}
-  .brand{font-size:10px;gap:12px}.brand small{font-size:7px}
+  .logo-h{height:34px}
+  .masthead{gap:16px}
+  .header-link{font-size:10px;text-align:right;line-height:1.4}
+  .logo-full{height:120px}
   .header-link{font-size:11px}.header-link span{margin-left:8px}
   .hero{padding:34px 6% 0;min-height:auto;display:flex;flex-direction:column}
   .hero-copy{display:contents}
@@ -236,10 +242,7 @@ footer{padding:55px 5.5% 26px}
 <body>
 
 <header class="masthead">
-  <a class="brand" href="#topo" aria-label="Os Mirandas">
-    <span class="monogram">OM<i>.</i></span>
-    <span>OS MIRANDAS<small>VIDA · CASAMENTO · NEGÓCIOS</small></span>
-  </a>
+  <a class="brand" href="#topo"><img class="logo-h" src="img/logo-horizontal-claro.png" alt="Os Mirandas — Casamento, Negócio, Vida com propósito"></a>
   <a class="header-link" href="#oferta" data-comprar>Quero fazer o CONECTA<span>↗</span></a>
 </header>
 
@@ -261,7 +264,7 @@ footer{padding:55px 5.5% 26px}
 
     <div class="portrait-stage" data-depth>
       <div class="portrait-frame">
-        <img src="img/hero.jpg" alt="Leandro abraçando Fernanda">
+        <img src="img/hero.jpg" alt="Leandro e Fernanda lado a lado">
         <div class="portrait-light"></div>
       </div>
       <div class="portrait-outline" aria-hidden="true"></div>
@@ -393,7 +396,7 @@ footer{padding:55px 5.5% 26px}
 
 <footer>
   <div class="footer-top">
-    <a class="brand" href="#topo"><span class="monogram">OM<i>.</i></span><span>OS MIRANDAS<small>VIDA · CASAMENTO · NEGÓCIOS</small></span></a>
+    <a class="brand" href="#topo"><img class="logo-full" src="img/logo-completo-claro.png" alt="Os Mirandas — Casamento, Negócio, Vida com propósito"></a>
     <nav><a href="https://instagram.com/osmiirandas" target="_blank" rel="noopener">Instagram ↗</a><a href="#como-funciona">Como funciona</a><a href="#oferta">O CONECTA</a></nav>
   </div>
   <p class="footer-frase">O negócio precisa caber na vida. <em>Não a vida no negócio.</em></p>
