@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mapa da Clareza do Casal Empreendedor — Os Mirandas</title>
-<meta name="description" content="Para o casal que empreende junto. Os dois respondem separados, e o mapa mostra onde vocês concordam e onde ainda não conversaram.">
+<title>CONECTA · O Mapa do Casal Empreendedor — Os Mirandas</title>
+<meta name="description" content="Casados, sócios e conectados. Cada um responde sozinho. Vocês recebem juntos a leitura das duas visões, a conversa que faltava e um pequeno combinado para testar.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -74,7 +74,7 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--salvia);outline-of
 .section-heading h2{font:400 clamp(40px,4.8vw,68px)/1.1 var(--serif);letter-spacing:-1.5px;margin-top:20px}
 .light .section-heading h2 em{background:linear-gradient(transparent 16%,var(--salvia) 16%);padding:0 .1em}
 .heading-bottom{display:flex;justify-content:space-between;align-items:flex-end;margin-top:22px;gap:24px;color:var(--muted-light);font-size:16px}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #173D3030;border-bottom:1px solid #173D3030;margin:44px 0 110px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #173D3030;border-bottom:1px solid #173D3030;margin:44px 0 110px}
 .step{padding:34px 28px 38px;transition:background .25s}
 .step+.step{border-left:1px solid #173D3030}
 .step:hover{background:var(--salvia-soft)}
@@ -97,16 +97,15 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--salvia);outline-of
 .mapa{margin-top:34px;padding:26px 26px 20px;background:var(--off);border:1px solid #173D3020}
 .mapa-top{display:flex;justify-content:space-between;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted-light);padding-bottom:14px;border-bottom:1px solid #173D3020}
 .mapa-top b{font-weight:500}
-.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin:0 6px 0 14px;vertical-align:0}
-.d1{background:var(--ink)} .d2{background:transparent;border:1.5px solid var(--ink)}
-.area{display:grid;grid-template-columns:110px 1fr 92px;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid #173D3014;font-size:13px}
-.area:last-child{border-bottom:0}
-.track{position:relative;height:1px;background:#173D3040}
-.track .dot{position:absolute;top:-5px;margin:0;transform:translateX(-50%);transition:left 1.1s cubic-bezier(.2,.7,.2,1)}
-.area .tag{font-size:10px;letter-spacing:1px;text-transform:uppercase;text-align:right}
-.tag.ok{color:#4F6B55}
-.tag.falar{color:var(--ink);font-weight:600}
-.mapa-nota{font-size:10px;color:var(--muted-light);margin-top:12px}
+.bloco{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:15px 0;border-bottom:1px solid #173D3014}
+.bloco:last-child{border-bottom:0;padding-bottom:4px}
+.bloco .k{font:italic 22px var(--serif);color:#4F6B55;line-height:1.2}
+.bloco b{display:block;font-size:14px;font-weight:600;margin-bottom:3px}
+.bloco p{font-size:13px;line-height:1.6;color:var(--muted-light)}
+.reveal-ready .bloco{opacity:0;transform:translateX(-12px);transition:opacity .6s,transform .6s}
+.reveal-ready .is-visible .bloco{opacity:1;transform:none}
+.is-visible .bloco:nth-child(3){transition-delay:.15s}.is-visible .bloco:nth-child(4){transition-delay:.3s}
+.is-visible .bloco:nth-child(5){transition-delay:.45s}.is-visible .bloco:nth-child(6){transition-delay:.6s}
 
 .line-link{display:flex;align-items:center;justify-content:space-between;gap:25px;font-size:15px;font-weight:600;border-bottom:1px solid #173D3055;padding:19px 0;margin-top:30px}
 .line-link span{font-size:26px;font-weight:400;transition:transform .2s}
@@ -173,12 +172,19 @@ footer{padding:55px 5.5% 26px}
 .footer-top,.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:24px}
 .footer-top nav{display:flex;gap:28px;font-size:12px}
 .footer-top nav a:hover{color:var(--salvia)}
+.footer-frase{margin-top:44px;font:400 clamp(24px,2.6vw,34px)/1.3 var(--serif);letter-spacing:-.4px}
+.footer-frase em{color:var(--salvia)}
 .footer-bottom{margin-top:40px;border-top:1px solid #ffffff22;padding-top:23px;font-size:11px;color:var(--muted-dark)}
 
 /* ---------- revelar ao rolar ---------- */
 .reveal-ready .reveal{opacity:.15;transform:translateY(26px);transition:opacity .8s,transform .8s}
 .reveal-ready .reveal.is-visible{opacity:1;transform:none}
 
+@media(max-width:1150px) and (min-width:901px){
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .step:nth-child(3){border-left:0}
+  .step:nth-child(n+3){border-top:1px solid #173D3030}
+}
 /* ---------- celular ---------- */
 @media(max-width:900px){
   .masthead{height:80px;margin:0 6%}
@@ -202,14 +208,11 @@ footer{padding:55px 5.5% 26px}
   .step{padding:26px 4px}
   .path{grid-template-columns:1fr;gap:30px}
   .path-visual{height:360px;order:2}
-  .area{grid-template-columns:84px 1fr 76px;font-size:12px}
   .prova{padding:70px 6%;grid-template-columns:1fr;gap:40px}
   .prova-photo{height:440px;order:2}
   .stat{grid-template-columns:1fr;gap:6px}
   .stat b{font-size:32px}
   .mapa{padding:20px 18px 16px}
-  .mapa-top{flex-direction:column;gap:10px}
-  .mapa-top .dot:first-child{margin-left:0}
   .preco{flex-direction:column;gap:4px}
   .oferta{padding:70px 6% 80px;grid-template-columns:1fr;gap:40px}
   .letter{margin:0 6px;padding:28px 24px;transform:rotate(1.2deg)}
@@ -237,7 +240,7 @@ footer{padding:55px 5.5% 26px}
     <span class="monogram">OM<i>.</i></span>
     <span>OS MIRANDAS<small>VIDA · CASAMENTO · NEGÓCIOS</small></span>
   </a>
-  <a class="header-link" href="#oferta" data-comprar>Quero o nosso mapa<span>↗</span></a>
+  <a class="header-link" href="#oferta" data-comprar>Quero fazer o CONECTA<span>↗</span></a>
 </header>
 
 <main id="topo">
@@ -248,12 +251,12 @@ footer{padding:55px 5.5% 26px}
     <div class="hero-glow" aria-hidden="true"></div>
 
     <div class="hero-copy">
-      <p class="eyebrow"><i></i>Mapa da Clareza do Casal Empreendedor</p>
-      <h1>Onde vocês concordam e onde <em>ainda não conversaram.</em></h1>
-      <p class="hero-lead">Para o casal que empreende junto. Os dois respondem separados, e o mapa mostra como estão dinheiro, papéis, decisões e os limites entre casa e empresa.</p>
-      <div class="selos"><span>Respondido pelos dois, separados</span><span>Com base cristã</span></div>
-      <a class="pill" href="#oferta" data-comprar>Quero o nosso mapa <span>↘</span></a>
-      <p class="micro">Não é terapia: é uma ferramenta prática para organizar o trabalho a dois.</p>
+      <p class="eyebrow"><i></i>CONECTA · O Mapa do Casal Empreendedor</p>
+      <h1>Casados, sócios e <em>conectados.</em></h1>
+      <p class="hero-lead">Cada um responde sozinho. Vocês recebem juntos a leitura das duas visões, a conversa que faltava e um pequeno combinado para testar.</p>
+      <div class="selos"><span>Cada um responde sozinho</span><span>Com base cristã</span></div>
+      <a class="pill" href="#oferta" data-comprar>Quero fazer o CONECTA <span>↘</span></a>
+      <p class="micro">Não é terapia nem teste de casamento. Sem nota, sem pontuação.</p>
     </div>
 
     <div class="portrait-stage" data-depth>
@@ -264,11 +267,11 @@ footer{padding:55px 5.5% 26px}
       <div class="portrait-outline" aria-hidden="true"></div>
       <span class="image-index">01 / O CASAL</span>
       <div class="portrait-caption"><span>Leandro &amp; Fernanda</span><small>CASADOS E SÓCIOS HÁ 17 ANOS</small></div>
-      <span class="floating-tag">Duas visões. Um acordo.</span>
+      <span class="floating-tag">Um mapa, não um diagnóstico.</span>
     </div>
 
     <div class="hero-bottom">
-      <span>Dinheiro · Papéis · Decisões · Limites</span>
+      <span>Comunicação · Unidade · Confiança · Estratégia</span>
       <a href="#como-funciona">Veja como funciona<span>↓</span></a>
       <span>Os Mirandas</span>
     </div>
@@ -278,29 +281,30 @@ footer{padding:55px 5.5% 26px}
   <section class="light section" id="como-funciona">
     <div class="section-heading reveal">
       <p class="eyebrow"><i></i>Como funciona</p>
-      <h2>Três passos, uma conversa <em>mais leve.</em></h2>
-      <div class="heading-bottom"><p>Sem sessão, sem exposição, sem ninguém “ganhar” a discussão.</p></div>
+      <h2>Quatro movimentos, uma <em>boa conversa.</em></h2>
+      <div class="heading-bottom"><p>Sem nota, sem pontuação. Um mapa, não um diagnóstico.</p></div>
     </div>
 
     <div class="steps reveal">
-      <div class="step"><span class="n">01</span><h3>Cada um responde sozinho</h3><p>As mesmas perguntas, cada um no seu tempo, sem o outro olhando. Assim aparece o que cada um pensa de verdade.</p></div>
-      <div class="step"><span class="n">02</span><h3>As respostas se cruzam</h3><p>O mapa coloca as duas visões lado a lado em dinheiro, papéis, decisões e limites entre casa e empresa.</p></div>
-      <div class="step"><span class="n">03</span><h3>Vocês recebem o mapa e o guia</h3><p>Onde já existe acordo, onde há conflito ainda não falado e por onde começar a conversa.</p></div>
+      <div class="step"><span class="n">01</span><h3>Perceber</h3><p>Cada um responde de 8 a 10 perguntas, sozinho, sobre como vive hoje o trabalho e a vida a dois.</p></div>
+      <div class="step"><span class="n">02</span><h3>Conversar</h3><p>A leitura cruza as duas perspectivas e escolhe um tema que merece ir para a mesa, com perguntas feitas para vocês.</p></div>
+      <div class="step"><span class="n">03</span><h3>Combinar</h3><p>Depois da conversa, vocês registram o que querem fazer diferente. O acordo é de vocês, não imposto.</p></div>
+      <div class="step"><span class="n">04</span><h3>Experimentar</h3><p>Uma mudança pequena para testar por alguns dias. Por exemplo: duas refeições na semana em que a empresa não entra.</p></div>
     </div>
 
     <article class="path">
       <div class="path-copy reveal">
-        <p class="eyebrow">O que o mapa mostra</p>
-        <h3>As duas visões, <em>lado a lado.</em></h3>
-        <p>Quando os dois respondem juntos, um tende a concordar com o outro para não criar clima. Separados, aparece o que cada um realmente pensa. E fica claro por onde começar.</p>
+        <p class="eyebrow">A devolutiva</p>
+        <h3>Um tema de conversa, <em>não munição.</em></h3>
+        <p>As duas visões são cruzadas nos bastidores. A devolutiva não revela o que cada um respondeu: ela mostra o que vale preservar e o que vale olhar agora.</p>
 
-        <div class="mapa" aria-label="Exemplo ilustrativo do mapa">
-          <div class="mapa-top"><b>Mapa do casal</b><span><span class="dot d1"></span>Resposta 1<span class="dot d2"></span>Resposta 2</span></div>
-          <div class="area"><span>Dinheiro</span><div class="track"><span class="dot d1" data-to="22%" style="left:50%"></span><span class="dot d2" data-to="78%" style="left:50%"></span></div><span class="tag falar">Conversar</span></div>
-          <div class="area"><span>Papéis</span><div class="track"><span class="dot d1" data-to="64%" style="left:50%"></span><span class="dot d2" data-to="70%" style="left:50%"></span></div><span class="tag ok">Acordo</span></div>
-          <div class="area"><span>Decisões</span><div class="track"><span class="dot d1" data-to="35%" style="left:50%"></span><span class="dot d2" data-to="58%" style="left:50%"></span></div><span class="tag ok">Ajustar</span></div>
-          <div class="area"><span>Casa × empresa</span><div class="track"><span class="dot d1" data-to="18%" style="left:50%"></span><span class="dot d2" data-to="86%" style="left:50%"></span></div><span class="tag falar">Conversar</span></div>
-          <p class="mapa-nota">Exemplo ilustrativo. Cada casal recebe o próprio mapa.</p>
+        <div class="mapa" aria-label="Exemplo ilustrativo da devolutiva">
+          <div class="mapa-top"><b>Devolutiva CONECTA</b><span>Exemplo ilustrativo</span></div>
+          <div class="bloco"><span class="k">01</span><div><b>O que vale preservar</b><p>As forças que já funcionam entre vocês.</p></div></div>
+          <div class="bloco"><span class="k">02</span><div><b>Uma coisa para olhar agora</b><p>Sem apontar culpados.</p></div></div>
+          <div class="bloco"><span class="k">03</span><div><b>A Conversa CONECTA</b><p>De 3 a 5 perguntas feitas para vocês.</p></div></div>
+          <div class="bloco"><span class="k">04</span><div><b>O combinado do casal</b><p>O acordo é de vocês, não imposto.</p></div></div>
+          <div class="bloco"><span class="k">05</span><div><b>O experimento</b><p>Duas refeições na semana em que a empresa não entra.</p></div></div>
         </div>
 
         <a class="line-link" href="#oferta">Ver o que vocês recebem <span>↗</span></a>
@@ -308,7 +312,7 @@ footer{padding:55px 5.5% 26px}
       <div class="path-visual" data-depth>
         <img src="img/trabalho.jpg" alt="O casal trabalhando lado a lado no notebook">
         <span class="visual-word">Duas visões.</span>
-        <span class="visual-label">RESPOSTA → CLAREZA</span>
+        <span class="visual-label">PERCEBER → EXPERIMENTAR</span>
       </div>
     </article>
   </section>
@@ -317,16 +321,16 @@ footer{padding:55px 5.5% 26px}
   <section class="prova">
     <div class="prova-photo" data-depth>
       <img src="img/homeoffice.jpg" alt="Leandro e Fernanda no home office">
-      <span>Casados.<br>Sócios.<br><em>Do mesmo lado.</em></span>
+      <span>Casados.<br>Sócios.<br><em>Conectados.</em></span>
     </div>
     <div class="reveal">
       <p class="eyebrow" style="color:var(--muted-dark)">Quem está do outro lado</p>
       <p class="prova-name">17<span>ANOS</span></p>
-      <h2>Não somos consultores. Somos um casal que <em style="color:var(--salvia)">também trabalha junto.</em></h2>
+      <h2>Não somos terapeutas. Somos um casal que <em style="color:var(--salvia)">também trabalha junto.</em></h2>
       <div class="stats">
-        <div class="stat"><b>17 anos</b><p><strong>Casados e sócios,</strong> aprendendo na prática a separar a empresa da mesa do jantar.</p></div>
-        <div class="stat"><b>2 visões</b><p><strong>Cada um responde separado,</strong> porque o mapa só vale se ouvir os dois lados.</p></div>
-        <div class="stat"><b>4 áreas</b><p><strong>Dinheiro, papéis, decisões</strong> e os limites entre a casa e a empresa.</p></div>
+        <div class="stat"><b>17 anos</b><p><strong>Casados e sócios,</strong> vivendo casamento e negócio na mesma vida.</p></div>
+        <div class="stat"><b>4 lentes</b><p><strong>Comunicação, unidade, confiança e estratégia,</strong> para olhar o que vocês constroem juntos.</p></div>
+        <div class="stat"><b>0 notas</b><p><strong>Sem score, sem ranking, sem semáforo.</strong> Um mapa, não um diagnóstico.</p></div>
       </div>
     </div>
   </section>
@@ -339,21 +343,22 @@ footer{padding:55px 5.5% 26px}
       <p class="eyebrow"><i style="background:var(--ink)"></i>A oferta</p>
       <span class="letter-symbol">↗</span>
       <h2>Tudo o que vocês recebem para <em>começar a conversa certa.</em></h2>
-      <p>Um retrato honesto de como está a sociedade de vocês hoje, e um guia prático para o próximo passo. No tempo de vocês, em casa.</p>
+      <p>Uma pausa para vocês olharem como estão vivendo o que constroem juntos.</p>
     </div>
     <div class="letter">
       <span class="letter-top"><span>Os Mirandas · para o casal</span><span>01 / 02</span></span>
-      <h3>Mapa da Clareza<br><em>do Casal Empreendedor</em></h3>
+      <h3>CONECTA<br><em>O Mapa do Casal Empreendedor</em></h3>
       <ul>
-        <li>Questionário para cada um responder sozinho</li>
-        <li>O mapa: onde vocês concordam e onde divergem</li>
-        <li>Leitura em dinheiro, papéis, decisões e limites entre casa e empresa</li>
-        <li>Guia escrito com os próximos passos do casal</li>
+        <li>Um questionário curto para cada um responder sozinho</li>
+        <li>O que vale preservar: as forças que já funcionam entre vocês</li>
+        <li>Uma coisa que vale olhar agora, sem apontar culpados</li>
+        <li>A Conversa CONECTA: de 3 a 5 perguntas feitas para vocês</li>
+        <li>O combinado do casal e um experimento curto para testar</li>
       </ul>
       <!-- PENDENTE: preço definido depois do teste com os 3 primeiros casais -->
       <div class="preco"><small>Valor de lançamento</small><strong>em breve</strong></div>
-      <a class="pill" href="#oferta" data-comprar>Quero o nosso mapa <span>↗</span></a>
-      <p class="micro">Não é terapia: é uma ferramenta prática para organizar o trabalho a dois.</p>
+      <a class="pill" href="#oferta" data-comprar>Quero fazer o CONECTA <span>↗</span></a>
+      <p class="micro">A devolutiva não revela o que cada um respondeu.</p>
     </div>
   </section>
 
@@ -365,10 +370,11 @@ footer{padding:55px 5.5% 26px}
         <h2>Antes de vocês <em>decidirem.</em></h2>
       </div>
       <div class="faq-list reveal">
-        <details><summary>Isso é terapia de casal?<span>+</span></summary><p>Não. É uma ferramenta prática para organizar o trabalho a dois. Se as respostas mostrarem uma crise séria no casamento, a gente acolhe e recomenda procurar ajuda profissional.</p></details>
-        <details><summary>Por que responder separados?<span>+</span></summary><p>Porque, respondendo juntos, um tende a concordar com o outro para não criar clima. Separados, aparece o que cada um pensa.</p></details>
-        <details><summary>E se a gente discordar em quase tudo?<span>+</span></summary><p>Então o mapa já cumpriu o papel: mostrou por onde a conversa precisa começar.</p></details>
-        <details><summary>Serve para o nosso negócio?<span>+</span></summary><p>Se vocês dois trabalham juntos no mesmo negócio e sentem o trabalho entrando em casa, o mapa foi feito para vocês.</p></details>
+        <details><summary>É terapia ou teste de casamento?<span>+</span></summary><p>Não. Não dá nota, não diz quem está certo e não substitui acompanhamento profissional. É uma pausa para vocês olharem como estão vivendo o que constroem juntos.</p></details>
+        <details><summary>Precisamos estar em crise para fazer?<span>+</span></summary><p>Não. Serve também para o casal que está bem e quer proteger o que já funciona.</p></details>
+        <details><summary>Meu cônjuge vai ver as minhas respostas?<span>+</span></summary><p>A devolutiva não mostra o que cada um respondeu. As duas visões são cruzadas nos bastidores e viram um tema de conversa, não munição.</p></details>
+        <details><summary>Onde entra a fé?<span>+</span></summary><p>A visão cristã orienta a leitura, sem virar devocional. A Bíblia aparece quando ilumina o tema, não como enfeite.</p></details>
+        <details><summary>Serve para o nosso negócio?<span>+</span></summary><p>Se vocês são casados e têm um negócio juntos, trabalhando lado a lado todo dia ou com participações diferentes, serve.</p></details>
       </div>
     </div>
   </section>
@@ -378,8 +384,8 @@ footer{padding:55px 5.5% 26px}
     <div class="final-image"><img src="img/sofa.jpg" alt="Leandro e Fernanda no sofá, com o notebook"></div>
     <div class="final-copy reveal">
       <p class="eyebrow"><i style="background:var(--ink)"></i>Casamento &amp; sociedade</p>
-      <h2>Casamento e sociedade não são inimigos. O que machuca é trabalhar junto <em>sem acordo.</em></h2>
-      <a class="pill" href="#oferta" data-comprar>Quero o nosso mapa <span>↗</span></a>
+      <h2>Nenhum negócio que vocês construam juntos deveria custar a <em>conexão</em> que existe entre vocês.</h2>
+      <a class="pill" href="#oferta" data-comprar>Quero fazer o CONECTA <span>↗</span></a>
       <p class="micro">Feito por Leandro e Fernanda, casados e sócios há 17 anos.</p>
     </div>
   </section>
@@ -388,29 +394,26 @@ footer{padding:55px 5.5% 26px}
 <footer>
   <div class="footer-top">
     <a class="brand" href="#topo"><span class="monogram">OM<i>.</i></span><span>OS MIRANDAS<small>VIDA · CASAMENTO · NEGÓCIOS</small></span></a>
-    <nav><a href="https://instagram.com/osmiirandas" target="_blank" rel="noopener">Instagram ↗</a><a href="#como-funciona">Como funciona</a><a href="#oferta">O mapa</a></nav>
+    <nav><a href="https://instagram.com/osmiirandas" target="_blank" rel="noopener">Instagram ↗</a><a href="#como-funciona">Como funciona</a><a href="#oferta">O CONECTA</a></nav>
   </div>
+  <p class="footer-frase">O negócio precisa caber na vida. <em>Não a vida no negócio.</em></p>
   <div class="footer-bottom"><p>© 2026 Os Mirandas · @osmiirandas</p><a href="#topo">Voltar ao topo ↑</a></div>
 </footer>
 
 <script>
 'use strict';
-// Link de pagamento: quando existir, cole aqui. Todos os botões "Quero o nosso mapa" passam a usar ele.
+// Link de pagamento: quando existir, cole aqui. Todos os botões "Quero fazer o CONECTA" passam a usar ele.
 const LINK_PAGAMENTO = '';
 if (LINK_PAGAMENTO) document.querySelectorAll('[data-comprar]').forEach(a => a.href = LINK_PAGAMENTO);
 
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fine = matchMedia('(pointer: fine)').matches;
 
-// Mapa ilustrativo: os pontos saem do centro e se separam quando o mapa aparece
-const moveDots = root => root.querySelectorAll('.track .dot').forEach(d => d.style.left = d.dataset.to);
-
 if (!reduced) {
   document.body.classList.add('reveal-ready');
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
     e.target.classList.add('is-visible');
-    moveDots(e.target);
     io.unobserve(e.target);
   }), { threshold: .12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
@@ -433,8 +436,6 @@ if (!reduced) {
     if (pending || scrollY > 1100) return; pending = true;
     requestAnimationFrame(() => { portrait.style.setProperty('--py', `${Math.min(scrollY, 850) * .045}px`); pending = false; });
   }, { passive: true });
-} else {
-  moveDots(document);
 }
 
 // Fundo do topo: dois campos de círculos (as duas visões) que se sobrepõem. Redesenha só quando o mouse mexe.
